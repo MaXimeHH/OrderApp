@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://mariadb:3306/commande
+    username: payetonkaya
+    password: Azertyuiop*
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    hibernate:
+      ddl-auto: update

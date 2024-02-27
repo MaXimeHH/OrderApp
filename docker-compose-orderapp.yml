@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  mariadb:
+    image: mariadb
+    container_name: mariadb_orderapp
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: commande
+      MYSQL_USER: payetonkaya
+      MYSQL_PASSWORD: Azertyuiop*
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+  springbootapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: orderApp_container
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mariadb
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mariadb://mariadb:3306/commande
+      SPRING_DATASOURCE_USERNAME: payetonkaya
+      SPRING_DATASOURCE_PASSWORD: Azertyuiop*
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.mariadb.jdbc.Driver
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.MariaDBDialect
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+
+volumes:
+  mariadb_data:
