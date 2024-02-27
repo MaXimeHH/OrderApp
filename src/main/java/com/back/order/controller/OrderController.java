@@ -1,8 +1,8 @@
-package com.back.payetonkawa.controller;
+package com.back.order.controller;
 
-import com.back.payetonkawa.controller.api.OrderApiInterface;
-import com.back.payetonkawa.dto.OrderDto;
-import com.back.payetonkawa.services.OrderService;
+import com.back.order.controller.api.OrderApiInterface;
+import com.back.order.dto.OrderDto;
+import com.back.order.services.OrderService;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.http.ResponseEntity;

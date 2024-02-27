@@ -1,7 +1,7 @@
-package com.back.payetonkawa.dto;
+package com.back.order.dto;
 
-import com.back.payetonkawa.model.Customer;
-import com.back.payetonkawa.model.Product;
+import com.back.order.model.Customer;
+import com.back.order.model.Product;
 import lombok.Getter;
 import lombok.Setter;
 

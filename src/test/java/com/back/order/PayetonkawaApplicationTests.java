@@ -1,4 +1,4 @@
-package com.back.payetonkawa;
+package com.back.order;
 
 
 import org.springframework.boot.test.context.SpringBootTest;

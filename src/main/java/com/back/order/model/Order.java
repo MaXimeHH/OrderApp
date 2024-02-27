@@ -1,4 +1,4 @@
-package com.back.payetonkawa.model;
+package com.back.order.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

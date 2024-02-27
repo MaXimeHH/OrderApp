@@ -1,7 +1,7 @@
-package com.back.payetonkawa.repository;
+package com.back.order.repository;
 
 
-import com.back.payetonkawa.model.Order;
+import com.back.order.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
